@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cccd84f9-6fe7-4235-8e12-86f995eb66d8" name="Changes" comment="сделал базу">
+    <list default="true" id="cccd84f9-6fe7-4235-8e12-86f995eb66d8" name="Changes" comment="улучшил мобилку">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/output.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,9 @@
     &quot;accountId&quot;: &quot;e91d2663-22f7-4a6e-a24a-d27173f65152&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -86,7 +90,8 @@
       <workItem from="1740901646763" duration="994000" />
       <workItem from="1740902799663" duration="3110000" />
       <workItem from="1740906959808" duration="165000" />
-      <workItem from="1740907156461" duration="5000000" />
+      <workItem from="1740907156461" duration="10062000" />
+      <workItem from="1740922577380" duration="5863000" />
     </task>
     <task id="LOCAL-00001" summary="сделал базу">
       <option name="closed" value="true" />
@@ -96,14 +101,25 @@
       <option name="project" value="LOCAL" />
       <updated>1740911452248</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="улучшил мобилку">
+      <option name="closed" value="true" />
+      <created>1740913344726</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740913344726</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="сделал базу" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделал базу" />
+    <MESSAGE value="улучшил мобилку" />
+    <option name="LAST_COMMIT_MESSAGE" value="улучшил мобилку" />
   </component>
 </project>
