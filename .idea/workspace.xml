@@ -69,6 +69,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/imgs" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -95,7 +96,7 @@
       <workItem from="1740922577380" duration="8170000" />
       <workItem from="1740999165149" duration="315000" />
       <workItem from="1741005638604" duration="3533000" />
-      <workItem from="1741020521685" duration="2186000" />
+      <workItem from="1741020521685" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="сделал базу">
       <option name="closed" value="true" />
@@ -121,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740934663854</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавил побольше элементов, надо доделать фотки и информацию о себе">
+      <option name="closed" value="true" />
+      <created>1741025837568</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741025837568</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
