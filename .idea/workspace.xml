@@ -7,7 +7,6 @@
     <list default="true" id="cccd84f9-6fe7-4235-8e12-86f995eb66d8" name="Changes" comment="добавил побольше элементов, надо доделать фотки и информацию о себе">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/input.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/output.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +96,10 @@
       <workItem from="1740999165149" duration="315000" />
       <workItem from="1741005638604" duration="3533000" />
       <workItem from="1741020521685" duration="2846000" />
+      <workItem from="1741155810571" duration="1262000" />
+      <workItem from="1741157599654" duration="4512000" />
+      <workItem from="1741167857181" duration="2445000" />
+      <workItem from="1741172988776" duration="2308000" />
     </task>
     <task id="LOCAL-00001" summary="сделал базу">
       <option name="closed" value="true" />
