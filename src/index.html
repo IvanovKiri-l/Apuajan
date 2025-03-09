@@ -49,21 +49,32 @@
             <h1 class="text-3xl sm:text-3xl md:text-5xl font-semibold text-gray-1000 mb-4 leading-tight">Информация обо мне:</h1>
             <p class="text-xl sm:text-2xl md:text-3xl text-gray-1000">Я являюсь высококвалифицированным учителем английского и немецкого языков, обладающая богатым опытом преподавания и работы в сфере образования. С 2005 года я проводила занятия как в онлайн-формате, так и в классическом образовательном учреждении. Мой стаж работы в области образования составляет более 40 лет. Моя первая специальность - учитель немецкого языка средней школы. Окончила АПИИЯ в 1980г в г. Алма-Ата. В подтверждение пословицы “Век живи - век учись” в 55 лет, я поступила в ОГПУ в г. Оренбург и в 2012 г. получила второе высшее образование по специальности - учитель английского языка. В своей работе я предоставляю уникальные уроки, которые помогают моим ученикам улучшить их навыки в области грамматики, лексики, чтения и письма, применяя в своей работе мнемотехнику.
                 <br class="mt-20">Так же прикладываю <span class="text-indigo-600">свой диплом</span></p>
-            <div class="mt-11">
+            <div class="mt-11 p-6">
             <img class="mt-32 w-full" src="imgs/diploma.png" alt="">
-            <a class="text-5xl mt-32 text-indigo-600" href="">Вот больше моих наград</a>
+            <a class="text-5xl mt-32 text-indigo-600" href="index2.html">Вот больше моих наград</a>
             </div>
         </div>
     </section>
 
-    <div class="flex flex-row w-full h-auto :hover shadow-amber-600 mt-64">
+    <div class="flex flex-row w-full h-auto :hover shadow-amber-600 mt-64 absolute relative">
         <div class="flex-1 px-4 sm:px-6">
-            <img src="imgs/apuajan1.png" alt="">
+            <img id="image1" class="h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                 src="imgs/apuajan1.png" alt="">
         </div>
         <div class="flex-1 px-4 sm:px-6">
-            <img class="my-6 mr-10x" src="imgs/apuajan1.png" alt="">
+            <img class="my-6 mr-10x rounded-lg mt-32 h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" src="imgs/apuajan2.png" alt="">
         </div>
     </div>
+
+    <section class="mb-8 sm:mt-5 sm:mb-4">
+
+
+        <div class="bg-white mt-100 h-full rounded-lg p-6 sm:p-8 md:p-10 ">
+            <h1 class="text-3xl sm:text-3xl md:text-5xl font-semibold text-gray-1000 mb-4 leading-tight">Информация обо мне:</h1>
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-1000">Я являюсь высококвалифицированным учителем английского и немецкого языков, обладающая богатым опытом преподавания и работы в сфере образования. С 2005 года я проводила занятия как в онлайн-формате, так и в классическом образовательном учреждении. Мой стаж работы в области образования составляет более 40 лет. Моя первая специальность - учитель немецкого языка средней школы. Окончила АПИИЯ в 1980г в г. Алма-Ата. В подтверждение пословицы “Век живи - век учись” в 55 лет, я поступила в ОГПУ в г. Оренбург и в 2012 г. получила второе высшее образование по специальности - учитель английского языка. В своей работе я предоставляю уникальные уроки, которые помогают моим ученикам улучшить их навыки в области грамматики, лексики, чтения и письма, применяя в своей работе мнемотехнику.</p>
+
+        </div>
+    </section>
 </main>
     <div class="text-7xl ml-20 mt-48 font-bold">
      <h1>Отзывы моих учеников:</h1>
@@ -97,7 +108,7 @@
                 <a href="https://vk.com/id449400187" target="_blank" class="text-gray-400 hover:text-white transition duration-300 text-2xl">
                     <i class="fab fa fa-2x">VK</i>
                 </a>
-                <a href="" target="_blank" class="text-gray-400 hover:text-white transition duration-300 text-2xl">
+                <a href="tg://resolve?domain=ваш_username"  class="text-gray-400 hover:text-white transition duration-300 text-2xl">
                     <i class="fab fa fa-2x">Telegram</i>
                 </a>
                 <a href="https://ok.ru/profile/576094134806" target="_blank" class="text-gray-400 hover:text-white transition duration-300 text-2xl">
@@ -114,6 +125,44 @@
         </div>
     </div>
 </footer>
+
+
+<div class="modal hidden fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <path d="M14.53 4.53L9 9.06L3.47 4.53C2.68 3.73 2.68 2.68 3.47 1.88C4.27 1.08 5.32 1.08 6.12 1.88L10.59 6.35L15.06 1.88C15.86 1.08 16.91 1.08 17.7 1.88C18.5 2.68 18.5 3.73 17.7 4.53Z"/>
+                <path d="M6.12 16.12C5.32 16.92 4.27 16.92 3.47 16.12C2.68 15.32 2.68 14.27 3.47 13.47L9 7.94L14.53 13.47C15.32 14.27 15.32 15.32 14.53 16.12C13.73 16.92 12.68 16.92 11.88 16.12L6.12 11.35L6.12 16.12Z"/>
+            </svg>
+        </div>
+
+        <img class="modal-content w-full object-contain" src="" alt="modal image">
+    </div>
+</div>
+
+<script>
+    const images = document.querySelectorAll('.flex-1 img');
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const modal = document.querySelector('.modal');
+            modal.classList.remove('hidden');
+            const modalImage = document.querySelector('.modal img');
+            modalImage.src = this.src;
+        });
+    });
+
+    const closeButton = document.querySelector('.modal-close');
+    closeButton.addEventListener('click', function() {
+        const modal = document.querySelector('.modal');
+        modal.classList.add('hidden');
+    });
+</script>
+
+
+
+
 </body>
 
 
