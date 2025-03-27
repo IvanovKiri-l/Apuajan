@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Мои награды</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="src/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+
+
+        /* Модальное окно с анимацией */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s;
+            touch-action: none;
+        }
+        .modal-content-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 80vh;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 30px rgba(255,255,255,0.3);
+            border-radius: 4px;
+            touch-action: manipulation;
+        }
+        .modal-zoomed {
+            cursor: move;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            z-index: 101;
+        }
+        .close:hover {
+            transform: rotate(90deg);
+        }
+
+
+        .zoom-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 101;
+        }
+        .zoom-btn {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        /* Эффекты для изображений */
+        .diploma-img {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 6px;
+        }
+        .diploma-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-violet-500 font-sans">
+
+<header class="bg-black shadow-sm h-16 py-4 px-4 sm:px-8 md:px-16 sticky top-0 z-50 transition-transform duration-300 transform" id="mainHeader">
+    <div class="container mx-auto h-full">
+        <nav class="flex flex-row flex-wrap justify-center md:justify-end items-end h-full gap-x-6 gap-y-2 sm:gap-x-8 md:gap-x-10 pt-1">
+            <a href="index.html" class="text-white text-lg sm:text-xl md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Обо мне</a>
+            <a href="index2.html" class="text-white text-lg sm:text-xl md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Мои дипломы</a>
+        </nav>
+    </div>
+</header>
+
+    <section class="sm:mt-5 sm:mb-4 flex-wrap text-3xl w-full gap-9 md:gap-9">
+        <div class=" container w-full sm:w-2/3 ml-11 mt-9">
+            <h1 class="text-3xl sm:text-5xl md:text-5xl font-bold text-gray-1000 mb-4 leading-tight max-w-full mr-3">
+                Жармагамбетова
+                Апуажан
+                Кереевна
+            </h1>
+        </div>
+        <div class="w-full sm:w-2/3">
+            <p class="text-2xl sm:text-2xl md:text-3xl text-gray-1000 font-semibold ml-11 mb-8">
+                Твой учитель английского и <br> немецкого языка.
+            </p>
+        </div>
+    </section>
+
+
+
+<main class="container mx-auto px-4 sm:px-6 py-8">
+    <div class="bg-white rounded-lg w-auto border-2 border-black border-solid shadow-xl">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 leading-tight p-6 text-center">Мои награды</h1>
+        <div class="w-full border-2 border-black"></div>
+
+        <div class="p-4 sm:p-6">
+            <div class="space-y-10">
+
+                <div class="flex flex-col items-center gap-6">
+                    <h1 class="text-2xl sm:text-3xl font-semibold text-center">Грамота по английскому языку</h1>
+                    <img src="src/imgs/diplomas/diploma1.webp" alt="Диплом 1"
+                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
+                         onclick="openModal('src/imgs/diplomas/diploma1.webp', 'Грамота по английскому языку')">
+                    <div class="w-full bg-black h-0.5"></div>
+                </div>
+
+
+                <div class="flex flex-col items-center gap-6">
+                    <h1 class="text-2xl sm:text-3xl font-semibold text-center">Сведения о результатах освоения программы</h1>
+                    <img src="src/imgs/diplomas/diploma2.webp" alt="Диплом 2"
+                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
+                         onclick="openModal('src/imgs/diplomas/diploma2.webp', 'Сведения о результатах освоения программы')">
+                    <div class="w-full bg-black h-0.5"></div>
+                </div>
+
+
+                <div class="flex flex-col items-center gap-6">
+                    <h1 class="text-2xl sm:text-3xl font-semibold text-center">Почетная грамота</h1>
+                    <img src="src/imgs/diplomas/diploma3.webp" alt="Диплом 3"
+                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
+                         onclick="openModal('src/imgs/diplomas/diploma3.webp', 'Почетная грамота')">
+
+                </div>
+            </div>
+<!--            <div class="flex justify-center items-center h-16 text-center mb-7">-->
+<!--                <a href="../index.html" class="text-lg font-bold text-black px-4 py-2 rounded-lg bg-violet-700 hover:bg-violet-700 duration-300 mt-20 sm:bg-violet-700 w-32 sm:w-auto text-center transition-all transform hover:scale-105 ease-in-out">-->
+<!--                    Вернуться-->
+<!--                </a>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+
+</main>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="text-center text-white text-xl mt-2" id="modal-title"></div>
+    <div class="modal-content-container">
+        <img class="modal-content" id="modal-img">
+    </div>
+    <div class="zoom-controls">
+        <button class="zoom-btn" onclick="zoomOut()">-</button>
+        <button class="zoom-btn" onclick="resetZoom()">1:1</button>
+        <button class="zoom-btn" onclick="zoomIn()">+</button>
+    </div>
+</div>
+
+<script>
+    // Данные для модального окна
+    const diplomas = [
+        { src: 'imgs/diplomas/diploma1.webp', title: 'Грамота по английскому языку' },
+        { src: 'imgs/diplomas/diploma2.webp', title: 'Сведения о результатах освоения программы' },
+        { src: 'imgs/diplomas/diploma3.webp', title: 'Почетная грамота' }
+    ];
+
+    let currentIndex = 0;
+    let scale = 1;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+
+    // Открытие модалки
+    function openModal(src, title) {
+        currentIndex = diplomas.findIndex(item => item.src === src);
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+
+        modal.style.display = 'block';
+        modalImg.src = src;
+        modalTitle.textContent = title;
+        document.body.style.overflow = 'hidden';
+
+        // Сброс масштаба и позиции
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        updateImageTransform();
+
+        // Добавление обработчиков для жестов
+        modalImg.addEventListener('mousedown', startDrag);
+        modalImg.addEventListener('touchstart', startDragTouch);
+    }
+
+    // Закрытие модалки
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+
+        // Удаление обработчиков
+        const modalImg = document.getElementById('modal-img');
+        modalImg.removeEventListener('mousedown', startDrag);
+        modalImg.removeEventListener('touchstart', startDragTouch);
+    }
+
+    // Навигация между изображениями
+    // function navigate(direction) {
+    //     currentIndex += direction;
+    //
+    //     if (currentIndex >= diplomas.length) {
+    //         currentIndex = 0;
+    //     } else if (currentIndex < 0) {
+    //         currentIndex = diplomas.length - 1;
+    //     }
+    //
+    //     const modalImg = document.getElementById('modal-img');
+    //     const modalTitle = document.getElementById('modal-title');
+    //     modalImg.src = diplomas[currentIndex].src;
+    //     modalTitle.textContent = diplomas[currentIndex].title;
+    //
+    //     // Сброс масштаба при переключении изображений
+    //     scale = 1;
+    //     translateX = 0;
+    //     translateY = 0;
+    //     updateImageTransform();
+    // }
+
+    // Увеличение
+    function zoomIn() {
+        scale += 0.5;
+        updateImageTransform();
+    }
+
+    // Уменьшение
+    function zoomOut() {
+        if (scale > 0.5) {
+            scale -= 0.5;
+            // Автоматический центринг при уменьшении
+            if (scale <= 1) {
+                translateX = 0;
+                translateY = 0;
+            }
+            updateImageTransform();
+        }
+    }
+
+    // Сброс масштаба
+    function resetZoom() {
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        updateImageTransform();
+    }
+
+    // Обновление трансформации изображения
+    function updateImageTransform() {
+        const modalImg = document.getElementById('modal-img');
+        modalImg.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+        // Добавляем/удаляем класс для курсора
+        if (scale > 1) {
+            modalImg.classList.add('modal-zoomed');
+        } else {
+            modalImg.classList.remove('modal-zoomed');
+        }
+    }
+
+    // Перетаскивание (для мыши)
+    function startDrag(e) {
+        if (scale <= 1) return;
+
+        isDragging = true;
+        startX = e.clientX - translateX;
+        startY = e.clientY - translateY;
+
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', stopDrag);
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        updateImageTransform();
+    }
+
+    function stopDrag() {
+        isDragging = false;
+        document.removeEventListener('mousemove', drag);
+        document.removeEventListener('mouseup', stopDrag);
+    }
+
+    // Перетаскивание (для touch-устройств)
+    function startDragTouch(e) {
+        if (scale <= 1) return;
+
+        isDragging = true;
+        startX = e.touches[0].clientX - translateX;
+        startY = e.touches[0].clientY - translateY;
+
+        document.addEventListener('touchmove', dragTouch);
+        document.addEventListener('touchend', stopDragTouch);
+    }
+
+    function dragTouch(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+
+        translateX = e.touches[0].clientX - startX;
+        translateY = e.touches[0].clientY - startY;
+        updateImageTransform();
+    }
+
+    function stopDragTouch() {
+        isDragging = false;
+        document.removeEventListener('touchmove', dragTouch);
+        document.removeEventListener('touchend', stopDragTouch);
+    }
+
+    // Закрытие по клику вне изображения
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('modal')) {
+            closeModal();
+        }
+    }
+
+    // Закрытие по ESC
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27) {
+            closeModal();
+        }
+    };
+</script>
+</body>
+</html>
