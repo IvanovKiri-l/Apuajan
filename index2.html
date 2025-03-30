@@ -1,15 +1,60 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <title>Мои награды</title>
+    <title>Жармагамбетова Апуажан Кереевна</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="src/output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Мои дипломы и награды",
+            "description": "Официальные документы и награды преподавателя английского и немецкого языков",
+            "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@type": "EducationalOccupationalCredential",
+                            "name": "Диплом о высшем образовании"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@type": "EducationalOccupationalCredential",
+                            "name": "Грамота по английскому языку"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "item": {
+                            "@type": "EducationalOccupationalCredential",
+                            "name": "Сведения о результатах освоения программы"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "item": {
+                            "@type": "EducationalOccupationalCredential",
+                            "name": "Почетная грамота"
+                        }
+                    }
+                ]
+            }
+        }
+    </script>
+
     <style>
-
-
-
         /* Модальное окно с анимацией */
         .modal {
             display: none;
@@ -41,9 +86,7 @@
             border-radius: 4px;
             touch-action: manipulation;
         }
-        .modal-zoomed {
-            cursor: move;
-        }
+
         .close {
             position: absolute;
             top: 20px;
@@ -58,7 +101,6 @@
         .close:hover {
             transform: rotate(90deg);
         }
-
 
         .zoom-controls {
             position: absolute;
@@ -95,6 +137,18 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
     </style>
 </head>
 <body class="bg-violet-500 font-sans">
@@ -104,6 +158,7 @@
         <nav class="flex flex-row flex-wrap justify-center md:justify-end items-end h-full gap-x-6 gap-y-2 sm:gap-x-8 md:gap-x-10 pt-1">
             <a href="index.html" class="text-white text-lg sm:text-xl md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Обо мне</a>
             <a href="index2.html" class="text-white text-lg sm:text-xl md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Мои дипломы</a>
+            <a href="index.html#reviews" class="text-white text-lg sm:text-xl md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Отзывы</a>
         </nav>
     </div>
 </header>
@@ -125,81 +180,178 @@
     </section>
 </div>
 
-
-    </section>
-
-
-
 <main class="container mx-auto px-4 sm:px-6 py-8">
     <div class="bg-white rounded-lg w-auto border-2 border-black border-solid shadow-xl">
-        <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 leading-tight p-6 text-center">Мои дипломы</h1>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 leading-tight p-6 text-center">Мои дипломы</h2>
         <div class="w-full border-2 border-black"></div>
 
         <div class="p-4 sm:p-6">
             <div class="space-y-10">
-                <div class="flex flex-col items-center gap-6">
-                    <h1 class="text-2xl sm:text-3xl font-semibold text-center">Диплом</h1>
+
+                <div class="flex flex-col items-center gap-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-center" itemprop="name">Диплом</h2>
                     <img src="src/imgs/diplomas/diploma.webp" alt="Диплом 1"
                          class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                         onclick="openModal('src/imgs/diplomas/diploma.webp', 'Диплом')">
-                    <div class="w-full bg-black h-0.5"></div>
-                    <h2></h2>
-                </div>
+                         onclick="openModal('src/imgs/diplomas/diploma.webp', 'Диплом')"
+                         itemprop="image">
 
-                <div class="flex flex-col items-center gap-6">
-                    <h1 class="text-2xl sm:text-3xl font-semibold text-center">Грамота по английскому языку</h1>
-                    <img src="src/imgs/diplomas/diploma1.webp" alt="Диплом 1"
-                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                         onclick="openModal('src/imgs/diplomas/diploma1.webp', 'Грамота по английскому языку')">
-                    <div class="w-full bg-black h-0.5"></div>
-
-                </div>
-
-
-                <div class="flex flex-col items-center gap-6">
-                    <h1 class="text-2xl sm:text-3xl font-semibold text-center">Сведения о результатах освоения программы</h1>
-                    <img src="src/imgs/diplomas/diploma2.webp" alt="Диплом 2"
-                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                         onclick="openModal('src/imgs/diplomas/diploma2.webp', 'Сведения о результатах освоения программы')">
+                    <div class="text-center text-xl" itemprop="description">
+                        <p>
+                            Настоящий диплом выдан Жармагамбетовой Апуажан Кереевне. В 1974 поступила в Алма-Атинский педагодический
+                            институт иностранных языков, окончив весь курс по специальности "Учитель иностранных языков".
+                            Присвоена квалификация учителя немецкого языка средней школы
+                        </p>
+                        <meta itemprop="educationalOrganization" content="Алма-Атинский педагодический институт иностранных языков">
+                        <meta itemprop="educationalYear" content="Год получения 1974">
+                        <meta itemprop="credentialCategory" content="Учитель иностранных языков">
+                    </div>
                     <div class="w-full bg-black h-0.5"></div>
                 </div>
 
 
-                <div class="flex flex-col items-center gap-6">
-                    <h1 class="text-2xl sm:text-3xl font-semibold text-center">Почетная грамота</h1>
-                    <img src="src/imgs/diplomas/diploma3.webp" alt="Диплом 3"
-                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                         onclick="openModal('src/imgs/diplomas/diploma3.webp', 'Почетная грамота')">
 
+
+
+                <div class="text-center" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+
+                    <meta itemprop="name" content="Сведения о содержании и результатах освоения программы профессиональной переподготовки">
+                    <meta itemprop="description" content="Документ подтверждает прохождение профессиональной переподготовки по работе с обучающимися с ограниченными возможностями здоровья">
+
+                    <div class="mt-5 w-full overflow-x-auto">
+                        <img class="mx-auto mb-4 md:block" src="src/imgs/diplomas/diploma2.webp" alt="">
+                        <div class="grid grid-cols-3 min-w-full text-sm md:text-base border-x border-gray-200 border-collapse">
+
+                            <div class="font-semibold p-2 bg-gray-100 border border-gray-300 border-r truncate" itemprop="about">Наименование</div>
+                            <div class="font-semibold p-2 bg-gray-100 border border-gray-300 border-r truncate" itemprop="timeRequired">Количество часов</div>
+                            <div class="font-semibold p-2 bg-gray-100 border border-gray-300 truncate" itemprop="assessment">Оценка</div>
+
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Государственное регулирование образования в Российской Федерации</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">32</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Хорошо</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Общая характеристика соматического и психического статуса обучающихся с ограниченными возможностями здоровья</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">48</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Комплекс мер медико-психолого-педагогического сопровождения обучающихся с ограниченными возможностями здоровья</span>
+                            </div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="timeRequired">50</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Методика обучения лиц с ограниченными возможностями здоровья по программам начального, основного и среднего общего образования</span>
+                            </div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="timeRequired">64</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Методика обучения лиц с ограниченными возможностями здоровья по программам профессионального обучения</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">62</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Итоговый экзамен</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">14</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Хорошо</div>
+                        </div>
+                    </div>
+
+                    <!-- Итоговая информация -->
+                    <div class="mt-4 text-right text-sm md:text-base">
+                        <p itemprop="totalHours"><strong>Всего:</strong> 270 часов</p>
+                    </div>
+
+
+                    <div class="mt-6 flex flex-col sm:flex-row justify-between text-sm md:text-base gap-4">
+                        <div class="text-center sm:text-left" itemprop="issuer" itemscope itemtype="https://schema.org/Organization">
+                            <p><strong itemprop="jobTitle">Руководитель образовательной организации</strong></p>
+                            <p class="mt-4 sm:mt-8" itemprop="name">Шишкова А. Индорубь</p>
+                        </div>
+                        <div class="text-center sm:text-right" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <p><strong>Секретарь</strong></p>
+                            <p class="mt-4 sm:mt-8" itemprop="name">Космореквич А.П.</p>
+                        </div>
+                    </div>
+
+                    <meta itemprop="educationalOrganization" content="АО «ГЕНТРАЛ», НАУЧНОСТЬ № 1">
+                    <meta itemprop="educationalYear" content="000000226988">
+                    <meta itemprop="credentialCategory" content="Профессиональная переподготовка">
+                    <meta itemprop="validIn" content="Российская Федерация">
+                </div>
+                <div class="w-full bg-black h-0.5 mt-4"></div>
+
+                <div class="flex flex-col items-center gap-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+                    <h2 class="text-2xl sm:text-3xl f   ont-semibold text-center" itemprop="name">Почетная грамота</h2>
+                    <img src="src/imgs/diplomas/diploma3.webp" alt="Почетная грамота"
+                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
+                         onclick="openModal('src/imgs/diplomas/diploma3.webp', 'Почетная грамота')"
+                         itemprop="image">
+                  <div class="text-center flex flex-col gap-3 text-xl border-x border-gray-200" itemprop="description">
+                        <h2>Почетная грамота <br>Награждается <br> Жармагамбетова Апуажан Кереевна</h2>
+                        <p>Учитель <br> муниципального бюджетного общеобразовательного учреждения <br> "Карасаевская средняя
+                            общеобразовательная школа <br> Акбулакского района Оренбургской области"</p>
+                      <p>За многолетний добросовестный труд <br> в сфере образования и с в связи с юбилеем</p>
+                      <p class="">12 марта 2020 года</p>
+                        <meta itemprop="issuer" content="Министерство образования оренбургской области">
+                        <meta itemprop="educationalYear" content="12 марта 2020 года">
+                    </div>
                 </div>
             </div>
-
         </div>
-</div>
+    </div>
 </main>
 
-<footer class="bg-black text-white py-8 mt-20">
+<footer class="bg-black text-white py-6 mt-8">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center flex-col text-2xl gap-5">
-            <h2 class="">Мои соцсети:</h2>
-            <div class="flex space-x-6 flex-col gap-9 md:flex-row">
-                <a href="https://vk.com/id449400187" class="text-gray-400 hover:text-white transition duration-300 ml-5 text-xl">VK</a>
-                <a href="https://t.me/apzhar" class="text-gray-400 hover:text-white transition duration-300 text-xl">Telegram</a>
-                <a href="https://ok.ru/profile/576094134806" class="text-gray-400 hover:text-white transition duration-300 text-xl">Одноклассники</a>
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-xl mb-2">Мои соцсети:</h2>
+
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+
+                <a href="https://vk.com/id449400187"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="flex items-center gap-2 hover:text-white transition">
+                    <i class="fab fa-vk text-xl"></i>
+                    <span>VK</span>
+                </a>
+
+
+                <a href="tg://resolve?domain=apzhar"
+                   onclick="window.open('https://t.me/apzhar', '_blank')"
+                   class="flex items-center gap-2 hover:text-white transition">
+                    <i class="fab fa-telegram text-xl"></i>
+                    <span>Telegram</span>
+                </a>
+
+
+                <a href="https://ok.ru/profile/576094134806"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="flex items-center gap-2 hover:text-white transition">
+                    <i class="fab fa-odnoklassniki text-xl"></i>
+                    <span>Одноклассники</span>
+                </a>
             </div>
-        </div>
-        <div class="text-center text-gray-400 mt-16">
-            <p>&copy; 2025 Все права защищены.</p>
+
+            <p class="text-gray-400 text-sm mt-4">&copy; 2025 Все права защищены</p>
         </div>
     </div>
 </footer>
-
 
 <div id="modal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="text-center text-white text-xl mt-2" id="modal-title"></div>
     <div class="modal-content-container">
-        <img class="modal-content" id="modal-img">
+        <img class="modal-content" alt="" id="modal-img">
     </div>
     <div class="zoom-controls">
         <button class="zoom-btn" onclick="zoomOut()">-</button>
@@ -209,183 +361,134 @@
 </div>
 
 <script>
-    // Данные для модального окна
-    const diplomas = [
-        { src: 'imgs/diplomas/diploma.webp', title: 'Диплом' },
-        { src: 'imgs/diplomas/diploma1.webp', title: 'Грамота по английскому языку' },
-        { src: 'imgs/diplomas/diploma2.webp', title: 'Сведения о результатах освоения программы' },
-        { src: 'imgs/diplomas/diploma3.webp', title: 'Почетная грамота' }
-    ];
 
-    let currentIndex = 0;
-    let scale = 1;
+    let lastScroll = 0;
+    const header = document.getElementById('mainHeader');
+    const headerHeight = header.offsetHeight;
+
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= headerHeight) {
+
+            header.style.transform = 'translateY(0)';
+        } else if (currentScroll > lastScroll) {
+
+            header.style.transform = `translateY(-${headerHeight}px)`;
+        } else {
+
+            header.style.transform = 'translateY(0)';
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    let currentScale = 1;
     let isDragging = false;
     let startX, startY, translateX = 0, translateY = 0;
 
-    // Открытие модалки
     function openModal(src, title) {
-        currentIndex = diplomas.findIndex(item => item.src === src);
         const modal = document.getElementById('modal');
         const modalImg = document.getElementById('modal-img');
         const modalTitle = document.getElementById('modal-title');
 
-        modal.style.display = 'block';
+        modal.style.display = "block";
         modalImg.src = src;
         modalTitle.textContent = title;
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = "hidden";
 
-        // Сброс масштаба и позиции
-        scale = 1;
+
+        currentScale = 1;
         translateX = 0;
         translateY = 0;
-        updateImageTransform();
-
-        // Добавление обработчиков для жестов
-        modalImg.addEventListener('mousedown', startDrag);
-        modalImg.addEventListener('touchstart', startDragTouch);
+        modalImg.style.transform = 'translate(-50%, -50%) scale(1)';
+        modalImg.classList.remove('modal-zoomed');
     }
 
-    // Закрытие модалки
     function closeModal() {
-        document.getElementById('modal').style.display = 'none';
-        document.body.style.overflow = 'auto';
-
-        // Удаление обработчиков
-        const modalImg = document.getElementById('modal-img');
-        modalImg.removeEventListener('mousedown', startDrag);
-        modalImg.removeEventListener('touchstart', startDragTouch);
+        document.getElementById('modal').style.display = "none";
+        document.body.style.overflow = "";
     }
 
-    // Навигация между изображениями
-    // function navigate(direction) {
-    //     currentIndex += direction;
-    //
-    //     if (currentIndex >= diplomas.length) {
-    //         currentIndex = 0;
-    //     } else if (currentIndex < 0) {
-    //         currentIndex = diplomas.length - 1;
-    //     }
-    //
-    //     const modalImg = document.getElementById('modal-img');
-    //     const modalTitle = document.getElementById('modal-title');
-    //     modalImg.src = diplomas[currentIndex].src;
-    //     modalTitle.textContent = diplomas[currentIndex].title;
-    //
-    //     // Сброс масштаба при переключении изображений
-    //     scale = 1;
-    //     translateX = 0;
-    //     translateY = 0;
-    //     updateImageTransform();
-    // }
-
-    // Увеличение
     function zoomIn() {
-        scale += 0.5;
-        updateImageTransform();
+        currentScale += 0.2;
+        applyZoom();
     }
 
-    // Уменьшение
     function zoomOut() {
-        if (scale > 0.5) {
-            scale -= 0.5;
-            // Автоматический центринг при уменьшении
-            if (scale <= 1) {
-                translateX = 0;
-                translateY = 0;
-            }
-            updateImageTransform();
+        if (currentScale > 0.4) {
+            currentScale -= 0.2;
+            applyZoom();
         }
     }
 
-    // Сброс масштаба
     function resetZoom() {
-        scale = 1;
+        currentScale = 1;
         translateX = 0;
         translateY = 0;
-        updateImageTransform();
+        applyZoom();
     }
 
-    // Обновление трансформации изображения
-    function updateImageTransform() {
+    function applyZoom() {
         const modalImg = document.getElementById('modal-img');
-        modalImg.style.transform = `translate(-50%, -50%) translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        modalImg.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${currentScale})`;
 
-        // Добавляем/удаляем класс для курсора
-        if (scale > 1) {
+        if (currentScale > 1) {
             modalImg.classList.add('modal-zoomed');
         } else {
             modalImg.classList.remove('modal-zoomed');
         }
     }
 
-    // Перетаскивание (для мыши)
-    function startDrag(e) {
-        if (scale <= 1) return;
 
-        isDragging = true;
-        startX = e.clientX - translateX;
-        startY = e.clientY - translateY;
-
-        document.addEventListener('mousemove', drag);
-        document.addEventListener('mouseup', stopDrag);
-    }
-
-    function drag(e) {
-        if (!isDragging) return;
-        e.preventDefault();
-
-        translateX = e.clientX - startX;
-        translateY = e.clientY - startY;
-        updateImageTransform();
-    }
-
-    function stopDrag() {
-        isDragging = false;
-        document.removeEventListener('mousemove', drag);
-        document.removeEventListener('mouseup', stopDrag);
-    }
-
-    // Перетаскивание (для touch-устройств)
-    function startDragTouch(e) {
-        if (scale <= 1) return;
-
-        isDragging = true;
-        startX = e.touches[0].clientX - translateX;
-        startY = e.touches[0].clientY - translateY;
-
-        document.addEventListener('touchmove', dragTouch);
-        document.addEventListener('touchend', stopDragTouch);
-    }
-
-    function dragTouch(e) {
-        if (!isDragging) return;
-        e.preventDefault();
-
-        translateX = e.touches[0].clientX - startX;
-        translateY = e.touches[0].clientY - startY;
-        updateImageTransform();
-    }
-
-    function stopDragTouch() {
-        isDragging = false;
-        document.removeEventListener('touchmove', dragTouch);
-        document.removeEventListener('touchend', stopDragTouch);
-    }
-
-    // Закрытие по клику вне изображения
     window.onclick = function(event) {
         if (event.target == document.getElementById('modal')) {
             closeModal();
         }
     }
 
-    // Закрытие по ESC
-    document.onkeydown = function(evt) {
-        evt = evt || window.event;
-        if (evt.keyCode == 27) {
-            closeModal();
+
+    document.getElementById('modal-img').addEventListener('mousedown', function(e) {
+        if (currentScale > 1) {
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+            this.style.cursor = 'grabbing';
         }
-    };
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        applyZoom();
+    });
+
+    document.addEventListener('mouseup', function() {
+        isDragging = false;
+        document.getElementById('modal-img').style.cursor = 'grab';
+    });
+
+
+    document.getElementById('modal-img').addEventListener('touchstart', function(e) {
+        if (currentScale > 1) {
+            isDragging = true;
+            startX = e.touches[0].clientX - translateX;
+            startY = e.touches[0].clientY - translateY;
+        }
+    });
+
+    document.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        translateX = e.touches[0].clientX - startX;
+        translateY = e.touches[0].clientY - startY;
+        applyZoom();
+    });
+
+    document.addEventListener('touchend', function() {
+        isDragging = false;
+    });
 </script>
 </body>
 </html>
