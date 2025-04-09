@@ -189,13 +189,17 @@
             <div class="space-y-10">
 
                 <div class="flex flex-col items-center gap-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-                    <h2 class="text-2xl sm:text-2xl text-center" itemprop="name">Диплом</h2>
+                    <h2 class="text-2xl sm:text-2xl text-center" itemprop="name">Дипломы</h2>
+                    <div class=" md:flex md:flex-row md:gap-9 ">
                     <img src="src/imgs/diplomas/diploma.webp" alt="Диплом 1"
                          class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                         onclick="openModal('src/imgs/diplomas/diploma.webp', 'Диплом')"
+                         onclick="openModal('src/imgs/diplomas/diploma.webp', 'Диплом 1')"
+                         itemprop="image">
+                    <img src="src/imgs/diplomas/КУРСЫ%20Диплом.webp " alt="Диплом 2" class="w-full max-w-lg h-auto cursor-pointer
+                    diploma-img rounded-lg modal-trigger"  onclick="openModal('src/imgs/diplomas/КУРСЫ%20Диплом.webp', 'Диплом 2')"
                          itemprop="image">
 
-
+                </div>
                     <div class="text-center text-lg" itemprop="description">
                         <p>
                             Настоящий диплом выдан Жармагамбетовой Апуажан Кереевне. В 1974 поступила в Алма-Атинский педагодический
@@ -219,12 +223,12 @@
                     <meta itemprop="description" content="Документ подтверждает прохождение профессиональной переподготовки по работе с обучающимися с ограниченными возможностями здоровья">
 
                     <div class="mt-5 w-full overflow-x-auto">
+                        <div class="md:flex md:flex-row md:gap-9">
                         <img class="mx-auto mb-4 md:block cursor-pointer" src="src/imgs/diplomas/diploma2third.webp" alt="" onclick="openModal('src/imgs/diplomas/diploma2third.webp', 'Результаты о освоении программы')"
                              itemprop="image">
                         <img class="mx-auto mb-4 md:block cursor-pointer" src="src/imgs/diplomas/diploma2second.webp" alt="" onclick="openModal('src/imgs/diplomas/diploma2second.webp', 'Результаты о освоении программы')"
                              itemprop="image">
-                        <img class="mx-auto mb-4 md:block cursor-pointer" src="src/imgs/diplomas/diploma2.webp" alt="" onclick="openModal('src/imgs/diplomas/diploma2.webp', 'Результаты о освоении программы')"
-                             itemprop="image">
+                        </div>
                         <div class="grid grid-cols-3 min-w-full text-sm md:text-base border-x border-gray-200 border-collapse">
 
                             <div class="font-semibold p-2 bg-gray-100 border border-gray-300 border-r truncate text-lg" itemprop="about">Наименование</div>
@@ -296,10 +300,17 @@
 
                 <div class="flex flex-col items-center gap-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
                     <h2 class="text-2xl md:text-2xl text-center" itemprop="name">Почетная грамота</h2>
+                    <div class="md:flex md:flex-row md:gap-9">
                     <img src="src/imgs/diplomas/diploma3.webp" alt="Почетная грамота"
                          class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
                          onclick="openModal('src/imgs/diplomas/diploma3.webp', 'Почетная грамота')"
                          itemprop="image">
+                        <img src="src/imgs/diplomas/Грамота.webp" alt="Грамота"
+                             class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
+                             onclick="openModal('src/imgs/diplomas/Грамота.webp', 'Грамота')"
+                             itemprop="image">
+
+                    </div>
                   <div class="text-center flex flex-col gap-3 text-xl border-x border-gray-200" itemprop="description">
                         <h2 class="text-xl">Почетная грамота <br>Награждается <br> Жармагамбетова Апуажан Кереевна</h2>
                         <p class="text-lg">Учитель <br> муниципального бюджетного общеобразовательного учреждения <br> "Карасаевская средняя
@@ -308,6 +319,28 @@
                       <p class="text-lg">12 марта 2020 года</p>
                         <meta itemprop="issuer" content="Министерство образования оренбургской области">
                         <meta itemprop="educationalYear" content="12 марта 2020 года">
+                    </div>
+                </div>
+                <div class="w-full bg-black h-0.5 mt-4"></div>
+                <div class="grid grid-cols-3 min-w-full text-sm md:text-base border-x border-gray-200 border-collapse">
+                    <img  class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/ДИПЛОМ%20АПУАЖАН.webp " alt="" onclick="openModal('src/imgs/diplomas/ДИПЛОМ%20АПУАЖАН.webp',)">
+                    <img class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/Сертификат%20соответствия%20№%20ШЯ82091034.webp" alt="" onclick="openModal('src/imgs/diplomas/Сертификат%20соответствия%20№%20ШЯ82091034.webp',)">
+                    <img  class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРИФ%20АПуажан.webp" alt="" onclick="openModal('src/imgs/diplomas/СЕРИФ%20АПуажан.webp',)">
+                </div>
+                <div class="w-full bg-black h-0.5 mt-4"></div>
+                <div id="achievements" class="flex flex-col gap-10">
+                    <h2 class="text-center text-xl mb-5">Достижения моих учеников</h2>
+                    <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТИФИКАТЫ.webp" alt="" onclick="openModal('src/imgs/diplomas/СЕРТИФИКАТЫ.webp',)">
+                    <div class="w-full bg-black h-0.5 mt-4"></div>
+                    <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТИФ%208%20кл.webp" alt="" onclick="openModal('src/imgs/diplomas/СЕРТИФ%208%20кл.webp',)">
+                    <div class="w-full bg-black h-0.5 mt-4"></div>
+                    <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТ%20Дима.webp" alt="" onclick="openModal('src/imgs/diplomas/СЕРТ%20Дима.webp')">
+                    <div class="w-full bg-black h-0.5 mt-4"></div>
+                    <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТИФ%208%20кл.webp" alt="" onclick="openModal('src/imgs/diplomas/СЕРТИФ%208%20кл.webp',)">
+                    <div class="w-full bg-black h-0.5 mt-4"></div>
+                    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-9 items-center gap-6 mt-4">
+                        <img class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger md:ml-32" src="src/imgs/diplomas/СЕРТИФИКАТ%20АК.jpg" alt="" onclick="openModal('src/imgs/diplomas/СЕРТИФИКАТ АК.jpg',)">
+                        <img class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger " src="src/imgs/diplomas/СЕРТИФИКАТ%20АК.jpg" alt="" onclick="openModal('src/imgs/diplomas/Грамота.webp',)">
                     </div>
                 </div>
             </div>
@@ -498,3 +531,7 @@
 </script>
 </body>
 </html>
+
+
+
+<!--сделать ссылку для достижений учеников и повышения клалификации-->
