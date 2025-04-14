@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Жармагамбетова Апуажан Кереевна</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="src/output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Мои дипломы и награды",
+      "description": "Официальные документы и награды преподавателя английского и немецкого языков",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Диплом о высшем образовании"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Грамота по английскому языку"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Сведения о результатах освоения программы"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Почетная грамота"
+            }
+          }
+        ]
+      }
+    }
+  </script>
+
+  <style>
+    /* Модальное окно с анимацией */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      animation: fadeIn 0.3s;
+      touch-action: none;
+    }
+    .modal-content-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90%;
+      max-height: 80vh;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 30px rgba(255,255,255,0.3);
+      border-radius: 4px;
+      touch-action: manipulation;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+      z-index: 101;
+    }
+    .close:hover {
+      transform: rotate(90deg);
+    }
+
+    .zoom-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 101;
+    }
+    .zoom-btn {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    /* Эффекты для изображений */
+    .diploma-img {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 6px;
+    }
+    .diploma-img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+  </style>
+</head>
+<body class="bg-violet-500 font-sans">
+<header class="bg-black shadow-sm h-auto min-h-16 py-3 px-4 sm:px-8 md:px-16 sticky top-0 z-50 transition-transform duration-300 transform" id="mainHeader">
+  <div class="container mx-auto h-full">
+    <nav class="flex flex-row flex-wrap justify-center md:justify-end items-center h-full gap-x-4 gap-y-2 sm:gap-x-8 md:gap-x-10 sm:flex-nowrap">
+      <a href="index.html" class="text-white text-base sm:text-lg md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Обо мне</a>
+      <a href="index2.html" class="text-white text-lg sm:text-xl md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Мои дипломы</a>
+      <a href="index.html#reviews" class="text-white text-base sm:text-lg md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Отзывы</a>
+      <a href="Qualification.html" class="text-white text-base sm:text-lg md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Диплом о повышении квалификации</a>
+    </nav>
+  </div>
+</header>
+
+
+
+<div class="container mx-auto px-6 py-8 w-full">
+  <section class="mb-8 sm:mt-5 sm:mb-4 flex-wrap text-3xl w-full gap-9 md:gap-9">
+    <div class="w-full sm:w-2/3 flex">
+      <h1 class="text-4xl sm:text-5xl md:text-5xl font-bold text-gray-1000 pb-4 leading-tight max-w-full">
+        Жармагамбетова
+        Апуажан
+        <span class="pt-3">Кереевна</span>
+      </h1>
+    </div>
+    <div class="w-full sm:w-1/3">
+      <p class="text-2xl sm:text-2xl md:text-2xl text-gray-800 font-semibold">
+        Твой учитель английского <br>и немецкого языка.
+      </p>
+    </div>
+  </section>
+</div>
+
+<main class="container mx-auto px-4 sm:px-6 py-8">
+  <div class="bg-white rounded-lg w-auto border-2 border-black border-solid shadow-xl">
+    <h2 class="text-2xl md:text-2xl sm:text-4xl font-bold text-gray-800 mb-4 leading-tight p-6 text-center">Дипломы учеников</h2>
+    <div class="w-full border-2 border-black"></div>
+
+    <div class="p-4 sm:p-6">
+
+      <div class="space-y-10">
+        <div id="achievements" class="flex flex-col gap-10">
+          <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТИФИКАТЫ.webp" alt="Диплом British Bulldog" onclick="openModal('src/imgs/diplomas/СЕРТИФИКАТЫ.webp',)">
+          <div class="w-full bg-black h-0.5 mt-4"></div>
+          <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТИФ%208%20кл.webp" alt="Диплом British Bulldog" onclick="openModal('src/imgs/diplomas/СЕРТИФ%208%20кл.webp',)">
+          <div class="w-full bg-black h-0.5 mt-4"></div>
+          <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТ%20Дима.webp" alt="Диплом British Bulldog" onclick="openModal('src/imgs/diplomas/СЕРТ%20Дима.webp')">
+          <div class="w-full bg-black h-0.5 mt-4"></div>
+          <img class="cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРТИФ%208%20кл.webp" alt="Диплом British Bulldog" onclick="openModal('src/imgs/diplomas/СЕРТИФ%208%20кл.webp',)">
+          <div class="w-full bg-black h-0.5 mt-4"></div>
+          <div class="flex flex-col md:grid md:grid-cols-2 md:gap-9 items-center gap-6 mt-4">
+            <img class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger md:ml-32" src="src/imgs/diplomas/СЕРТИФИКАТ%20АК.jpg" alt="Сертификат от президенской академии" onclick="openModal('src/imgs/diplomas/СЕРТИФИКАТ АК.jpg',)">
+            <img class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger " src="src/imgs/diplomas/Zchukanova.webp" alt="Сертификат от президенской академии" onclick="openModal('src/imgs/diplomas/Zchukanova.webp',)">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="text-center text-white text-xl mt-2" id="modal-title"></div>
+  <div class="modal-content-container">
+    <img class="modal-content" alt="" id="modal-img">
+  </div>
+  <div class="zoom-controls">
+    <button class="zoom-btn" onclick="zoomOut()">-</button>
+    <button class="zoom-btn" onclick="resetZoom()">1:1</button>
+    <button class="zoom-btn" onclick="zoomIn()">+</button>
+  </div>
+</div>
+
+<footer class="bg-black text-white py-6 mt-8">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col items-center gap-4">
+      <h2 class="text-xl mb-2">Мои соцсети:</h2>
+
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+
+        <a href="https://vk.com/id449400187"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="flex items-center gap-2 hover:text-white transition">
+          <i class="fab fa-vk text-xl"></i>
+          <span>VK</span>
+        </a>
+
+
+        <a href="tg://resolve?domain=apzhar"
+           onclick="window.open('https://t.me/apzhar', '_blank')"
+           class="flex items-center gap-2 hover:text-white transition">
+          <i class="fab fa-telegram text-xl"></i>
+          <span>Telegram</span>
+        </a>
+
+
+        <a href="https://ok.ru/profile/576094134806"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="flex items-center gap-2 hover:text-white transition">
+          <i class="fab fa-odnoklassniki text-xl"></i>
+          <span>Одноклассники</span>
+        </a>
+      </div>
+
+      <p class="text-gray-400 text-sm mt-4">&copy; 2025 Все права защищены</p>
+    </div>
+  </div>
+</footer>
+<script>
+
+  let lastScroll = 0;
+  const header = document.getElementById('mainHeader');
+  const headerHeight = header.offsetHeight;
+
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= headerHeight) {
+
+      header.style.transform = 'translateY(0)';
+    } else if (currentScroll > lastScroll) {
+
+      header.style.transform = `translateY(-${headerHeight}px)`;
+    } else {
+
+      header.style.transform = 'translateY(0)';
+    }
+
+    lastScroll = currentScroll;
+  });
+
+  let currentScale = 1;
+  let isDragging = false;
+  let startX, startY, translateX = 0, translateY = 0;
+
+  function openModal(src, title) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+
+    modal.style.display = "block";
+    modalImg.src = src;
+    modalTitle.textContent = title;
+    document.body.style.overflow = "hidden";
+
+
+    currentScale = 1;
+    translateX = 0;
+    translateY = 0;
+    modalImg.style.transform = 'translate(-50%, -50%) scale(1)';
+    modalImg.classList.remove('modal-zoomed');
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  function zoomIn() {
+    currentScale += 0.2;
+    applyZoom();
+  }
+
+  function zoomOut() {
+    if (currentScale > 0.4) {
+      currentScale -= 0.2;
+      applyZoom();
+    }
+  }
+
+  function resetZoom() {
+    currentScale = 1;
+    translateX = 0;
+    translateY = 0;
+    applyZoom();
+  }
+
+  function applyZoom() {
+    const modalImg = document.getElementById('modal-img');
+    modalImg.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${currentScale})`;
+
+    if (currentScale > 1) {
+      modalImg.classList.add('modal-zoomed');
+    } else {
+      modalImg.classList.remove('modal-zoomed');
+    }
+  }
+
+
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('modal')) {
+      closeModal();
+    }
+  }
+
+
+  document.getElementById('modal-img').addEventListener('mousedown', function(e) {
+    if (currentScale > 1) {
+      isDragging = true;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+      this.style.cursor = 'grabbing';
+    }
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    translateX = e.clientX - startX;
+    translateY = e.clientY - startY;
+    applyZoom();
+  });
+
+  document.addEventListener('mouseup', function() {
+    isDragging = false;
+    document.getElementById('modal-img').style.cursor = 'grab';
+  });
+
+
+  document.getElementById('modal-img').addEventListener('touchstart', function(e) {
+    if (currentScale > 1) {
+      isDragging = true;
+      startX = e.touches[0].clientX - translateX;
+      startY = e.touches[0].clientY - translateY;
+    }
+  });
+
+  document.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    translateX = e.touches[0].clientX - startX;
+    translateY = e.touches[0].clientY - startY;
+    applyZoom();
+  });
+
+  document.addEventListener('touchend', function() {
+    isDragging = false;
+  });
+</script>
+
+</body>
+</html>
