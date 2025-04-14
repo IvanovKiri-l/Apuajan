@@ -1,8 +1,8 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Жармагамбетова Апуажан Кереевна</title>
-    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="src/output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -152,17 +152,19 @@
     </style>
 </head>
 <body class="bg-violet-500 font-sans">
-
 <header class="bg-black shadow-sm h-auto min-h-16 py-3 px-4 sm:px-8 md:px-16 sticky top-0 z-50 transition-transform duration-300 transform" id="mainHeader">
     <div class="container mx-auto h-full">
         <nav class="flex flex-row flex-wrap justify-center md:justify-end items-center h-full gap-x-4 gap-y-2 sm:gap-x-8 md:gap-x-10 sm:flex-nowrap">
             <a href="index.html" class="text-white text-base sm:text-lg md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Обо мне</a>
+            <a href="index2.html" class="text-white text-lg sm:text-xl md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Мои дипломы</a>
             <a href="index.html#reviews" class="text-white text-base sm:text-lg md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Отзывы</a>
             <a href="StudentDiplomas.html" class="text-white text-base sm:text-lg md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Достижения учеников</a>
-            <a href="Qualification.html" class="text-white text-base sm:text-lg md:text-2xl hover:text-indigo-600 transition-colors font-medium whitespace-nowrap">Диплом о повышении квалификации</a>
         </nav>
     </div>
 </header>
+
+
+
 <div class="container mx-auto px-6 py-8 w-full">
     <section class="mb-8 sm:mt-5 sm:mb-4 flex-wrap text-3xl w-full gap-9 md:gap-9">
         <div class="w-full sm:w-2/3 flex">
@@ -182,76 +184,110 @@
 
 <main class="container mx-auto px-4 sm:px-6 py-8">
     <div class="bg-white rounded-lg w-auto border-2 border-black border-solid shadow-xl">
-        <h2 class="text-2xl md:text-2xl sm:text-4xl font-bold text-gray-800 mb-4 leading-tight p-6 text-center">Мои дипломы</h2>
+        <h2 class="text-2xl md:text-2xl sm:text-4xl font-bold text-gray-800 mb-4 leading-tight p-6 text-center">Диплом о повышении клалификации</h2>
         <div class="w-full border-2 border-black"></div>
 
         <div class="p-4 sm:p-6">
+
             <div class="space-y-10">
+                <div class="text-center" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
 
-                <div class="flex flex-col items-center gap-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-                    <h2 class="text-2xl sm:text-2xl text-center" itemprop="name">Дипломы</h2>
-                    <div class=" md:flex md:flex-row md:gap-9 ">
-                    <img src="src/imgs/diplomas/diploma.webp" alt="Диплом 1"
-                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                         onclick="openModal('src/imgs/diplomas/diploma.webp', 'Диплом 1')"
-                         itemprop="image">
-                    <img src="src/imgs/diplomas/КУРСЫ%20Диплом.webp " alt="Диплом 2" class="w-full max-w-lg h-auto cursor-pointer
-                    diploma-img rounded-lg modal-trigger"  onclick="openModal('src/imgs/diplomas/КУРСЫ%20Диплом.webp', 'Диплом 2')"
-                         itemprop="image">
+                    <meta itemprop="name" content="Сведения о содержании и результатах освоения программы профессиональной переподготовки">
+                    <meta itemprop="description" content="Документ подтверждает прохождение профессиональной переподготовки по работе с обучающимися с ограниченными возможностями здоровья">
 
-                </div>
-                    <div class="text-center text-lg" itemprop="description">
-                        <p>
-                            Настоящий диплом выдан Жармагамбетовой Апуажан Кереевне. В 1974 поступила в Алма-Атинский педагодический
-                            институт иностранных языков, окончив весь курс по специальности "Учитель иностранных языков".
-                            Присвоена квалификация учителя немецкого языка средней школы
-                        </p>
-                        <meta itemprop="educationalOrganization" content="Алма-Атинский педагодический институт иностранных языков">
-                        <meta itemprop="educationalYear" content="Год получения 1974">
-                        <meta itemprop="credentialCategory" content="Учитель иностранных языков">
+                    <div class="mt-5 w-full overflow-x-auto">
+                        <div class="md:flex md:flex-row md:gap-9">
+                            <img class="mx-auto mb-4 md:block cursor-pointer" src="src/imgs/diplomas/diploma2third.webp" alt="" onclick="openModal('src/imgs/diplomas/diploma2third.webp', 'Результаты о освоении программы')"
+                                 itemprop="image">
+                            <img class="mx-auto mb-4 md:block cursor-pointer" src="src/imgs/diplomas/diploma2second.webp" alt="" onclick="openModal('src/imgs/diplomas/diploma2second.webp', 'Результаты о освоении программы')"
+                                 itemprop="image">
+                        </div>
+                        <div class="grid grid-cols-3 min-w-full text-sm md:text-base border-x border-gray-200 border-collapse">
+
+                            <div class="font-semibold p-2 bg-gray-100 border border-gray-300 border-r truncate text-lg" itemprop="about">Наименование</div>
+                            <div class="font-semibold p-2 bg-gray-100 border border-gray-300 border-r truncate text-lg" itemprop="timeRequired">Количество часов</div>
+                            <div class="font-semibold p-2 bg-gray-100 border border-gray-300 truncate text-lg" itemprop="assessment">Оценка</div>
+
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Государственное регулирование образования в Российской Федерации</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">32</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Хорошо</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Общая характеристика соматического и психического статуса обучающихся с ограниченными возможностями здоровья</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">48</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Комплекс мер медико-психолого-педагогического сопровождения обучающихся с ограниченными возможностями здоровья</span>
+                            </div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="timeRequired">50</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Методика обучения лиц с ограниченными возможностями здоровья по программам начального, основного и среднего общего образования</span>
+                            </div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="timeRequired">64</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Методика обучения лиц с ограниченными возможностями здоровья по программам профессионального обучения</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">62</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Удовлетворительно</div>
+
+                            <div class="p-2 border border-gray-200 text-center" itemprop="hasCourse" itemscope itemtype="https://schema.org/Course">
+                                <span itemprop="name">Итоговый экзамен</span>
+                            </div>
+                            <div class="p-2 border border-gray-200  text-center" itemprop="timeRequired">14</div>
+                            <div class="p-2 border border-gray-200 text-center" itemprop="assessment">Хорошо</div>
+                        </div>
                     </div>
-                    <div class="w-full bg-black h-0.5"></div>
-                </div>
 
-
-
-                <div class="flex flex-col items-center gap-6" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-                    <h2 class="text-2xl md:text-2xl text-center" itemprop="name">Почетная грамота</h2>
-                    <div class="md:flex md:flex-row md:gap-9">
-                    <img src="src/imgs/diplomas/diploma3.webp" alt="Почетная грамота"
-                         class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                         onclick="openModal('src/imgs/diplomas/diploma3.webp', 'Почетная грамота')"
-                         itemprop="image">
-                        <img src="src/imgs/diplomas/Грамота.webp" alt="Грамота"
-                             class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger"
-                             onclick="openModal('src/imgs/diplomas/Грамота.webp', 'Грамота')"
-                             itemprop="image">
-
+                    <!-- Итоговая информация -->
+                    <div class="mt-4 text-right text-sm md:text-base">
+                        <p itemprop="totalHours"><strong>Всего:</strong> 270 часов</p>
                     </div>
-                  <div class="text-center flex flex-col gap-3 text-xl border-x border-gray-200" itemprop="description">
-                        <h2 class="text-xl">Почетная грамота <br>Награждается <br> Жармагамбетова Апуажан Кереевна</h2>
-                        <p class="text-lg">Учитель <br> муниципального бюджетного общеобразовательного учреждения <br> "Карасаевская средняя
-                            общеобразовательная школа <br> Акбулакского района Оренбургской области"</p>
-                      <p class="text-lg">За многолетний добросовестный труд <br> в сфере образования и в связи с юбилеем</p>
-                      <p class="text-lg">12 марта 2020 года</p>
-                        <meta itemprop="issuer" content="Министерство образования оренбургской области">
-                        <meta itemprop="educationalYear" content="12 марта 2020 года">
+
+
+                    <div class="mt-6 flex flex-col sm:flex-row justify-between text-sm md:text-base gap-4">
+                        <div class="text-center sm:text-left" itemprop="issuer" itemscope itemtype="https://schema.org/Organization">
+                            <p><strong itemprop="jobTitle">Руководитель образовательной организации</strong></p>
+                            <p class="mt-4 sm:mt-8" itemprop="name">Шишкова А. Индорубь</p>
+                        </div>
+                        <div class="text-center sm:text-right" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <p><strong>Секретарь</strong></p>
+                            <p class="mt-4 sm:mt-8" itemprop="name">Космореквич А.П.</p>
+                        </div>
                     </div>
+
+                    <meta itemprop="educationalOrganization" content="АО «ГЕНТРАЛ», НАУЧНОСТЬ № 1">
+                    <meta itemprop="educationalYear" content="000000226988">
+                    <meta itemprop="credentialCategory" content="Профессиональная переподготовка">
+                    <meta itemprop="validIn" content="Российская Федерация">
                 </div>
-                <div class="w-full bg-black h-0.5 mt-4"></div>
-                <div class="grid grid-cols-3 min-w-full text-sm md:text-base border-x border-gray-200 border-collapse">
-                    <img  class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/ДИПЛОМ%20АПУАЖАН.webp " alt="Диплом Лауреата 1 степени" onclick="openModal('src/imgs/diplomas/ДИПЛОМ%20АПУАЖАН.webp',)">
-                    <img class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/Сертификат%20соответствия%20№%20ШЯ82091034.webp" alt="Сертификат соответствия Инфоурок" onclick="openModal('src/imgs/diplomas/Сертификат%20соответствия%20№%20ШЯ82091034.webp',)">
-                    <img  class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger" src="src/imgs/diplomas/СЕРИФ%20АПуажан.webp" alt="Сертификат от академии педагогов России и стран СНГ" onclick="openModal('src/imgs/diplomas/СЕРИФ%20АПуажан.webp',)">
-                </div>
-                <div class="w-full bg-black h-0.5 mt-4"></div>
-                <div class="flex flex-row justify-center items-center">
-                <img class="w-full max-w-lg h-auto cursor-pointer diploma-img modal-trigger md:ml-32" src="src/imgs/diplomas/СЕРТИФИКАТ%20АК.jpg" alt="Сертификат от Президентской Академии" onclick="openModal('src/imgs/diplomas/СЕРТИФИКАТ АК.jpg',)">
-            </div>
+
             </div>
         </div>
     </div>
 </main>
+
+
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="text-center text-white text-xl mt-2" id="modal-title"></div>
+    <div class="modal-content-container">
+        <img class="modal-content" alt="" id="modal-img">
+    </div>
+    <div class="zoom-controls">
+        <button class="zoom-btn" onclick="zoomOut()">-</button>
+        <button class="zoom-btn" onclick="resetZoom()">1:1</button>
+        <button class="zoom-btn" onclick="zoomIn()">+</button>
+    </div>
+</div>
 
 <footer class="bg-black text-white py-6 mt-8">
     <div class="container mx-auto px-4">
@@ -290,20 +326,6 @@
         </div>
     </div>
 </footer>
-
-<div id="modal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div class="text-center text-white text-xl mt-2" id="modal-title"></div>
-    <div class="modal-content-container">
-        <img class="modal-content" alt="" id="modal-img">
-    </div>
-    <div class="zoom-controls">
-        <button class="zoom-btn" onclick="zoomOut()">-</button>
-        <button class="zoom-btn" onclick="resetZoom()">1:1</button>
-        <button class="zoom-btn" onclick="zoomIn()">+</button>
-    </div>
-</div>
-
 <script>
 
     let lastScroll = 0;
@@ -434,9 +456,6 @@
         isDragging = false;
     });
 </script>
+
 </body>
 </html>
-
-
-
-<!--сделать ссылку для достижений учеников и повышения клалификации-->
